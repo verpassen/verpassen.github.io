@@ -20,28 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <meta name="hexo-config" content="{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Suche...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}">
-<meta name="description" content="Intro  切屑基礎     切屑材料    切屑厚度    切屑比(chip compression ratio)   形成的基理  切屑特性  可觀察的特性   Chip Thinning     原理    常見的形式    應用">
+<meta name="description" content="ISO 13399 (Cutting tool data representation and exchange)用於儲存刀具相關的資訊格式，可應用在不同系統CAD、CAM、ERP等等之間數據溝通的媒介 由於刀具製造商有自己的品項名稱，因此在溝通或是資料庫的儲存上有很大的麻煩。  - [WIKI](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;ISO_13399) -  GTC 的描">
 <meta property="og:type" content="article">
-<meta property="og:title" content="chip research outline">
-<meta property="og:url" content="http://example.com/2021/04/03/Cutting%20Article%20Review/index.html">
+<meta property="og:title" content="Generic Tool Classification(GTC) (doing)">
+<meta property="og:url" content="http://example.com/2021/04/09/GTC/index.html">
 <meta property="og:site_name" content="Brent&#39;s Hexo">
-<meta property="og:description" content="Intro  切屑基礎     切屑材料    切屑厚度    切屑比(chip compression ratio)   形成的基理  切屑特性  可觀察的特性   Chip Thinning     原理    常見的形式    應用">
+<meta property="og:description" content="ISO 13399 (Cutting tool data representation and exchange)用於儲存刀具相關的資訊格式，可應用在不同系統CAD、CAM、ERP等等之間數據溝通的媒介 由於刀具製造商有自己的品項名稱，因此在溝通或是資料庫的儲存上有很大的麻煩。  - [WIKI](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;ISO_13399) -  GTC 的描">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-04-03T06:35:38.453Z">
-<meta property="article:modified_time" content="2021-04-04T02:14:29.589Z">
+<meta property="article:published_time" content="2021-04-09T00:34:38.142Z">
+<meta property="article:modified_time" content="2021-04-17T04:08:11.121Z">
 <meta property="article:author" content="Brent Chang">
 <meta property="article:tag" content="note">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2021/04/03/Cutting%20Article%20Review/">
+<link rel="canonical" href="http://example.com/2021/04/09/GTC/">
 
 
 
 <meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en/zh&quot;}">
 <meta name="hexo-config-calendar" content="">
 <script data-pjax src="/js/load-config.js"></script>
-  <title>chip research outline | Brent's Hexo</title>
+  <title>Generic Tool Classification(GTC) (doing) | Brent's Hexo</title>
   
 
 
@@ -110,7 +110,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Inhaltsverzeichnis
@@ -123,6 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ISO-13399-Cutting-tool-data-representation-and-exchange"><span class="nav-number">1.</span> <span class="nav-text">ISO 13399 (Cutting tool data representation and exchange)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GTC-%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">GTC 的描述</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -175,7 +176,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en/zh">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/03/Cutting%20Article%20Review/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/09/GTC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -188,7 +189,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          chip research outline
+          Generic Tool Classification(GTC) (doing)
         </h1>
 
         <div class="post-meta-container">
@@ -199,14 +200,14 @@
       </span>
       <span class="post-meta-item-text">Veröffentlicht am</span>
 
-      <time title="Erstellt: 2021-04-03 14:35:38" itemprop="dateCreated datePublished" datetime="2021-04-03T14:35:38+08:00">2021-04-03</time>
+      <time title="Erstellt: 2021-04-09 08:34:38" itemprop="dateCreated datePublished" datetime="2021-04-09T08:34:38+08:00">2021-04-09</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Bearbeitet am</span>
-        <time title="Geändert am: 2021-04-04 10:14:29" itemprop="dateModified" datetime="2021-04-04T10:14:29+08:00">2021-04-04</time>
+        <time title="Geändert am: 2021-04-17 12:08:11" itemprop="dateModified" datetime="2021-04-17T12:08:11+08:00">2021-04-17</time>
       </span>
 
   
@@ -219,31 +220,84 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <ul>
-<li><p><strong>Intro</strong></p>
-</li>
-<li><p><strong>切屑基礎</strong></p>
+        <h2 id="ISO-13399-Cutting-tool-data-representation-and-exchange"><a href="#ISO-13399-Cutting-tool-data-representation-and-exchange" class="headerlink" title="ISO 13399 (Cutting tool data representation and exchange)"></a>ISO 13399 (Cutting tool data representation and exchange)</h2><pre><code>用於儲存刀具相關的資訊格式，可應用在不同系統CAD、CAM、ERP等等之間數據溝通的媒介
+由於刀具製造商有自己的品項名稱，因此在溝通或是資料庫的儲存上有很大的麻煩。
+
+- [WIKI](https://en.wikipedia.org/wiki/ISO_13399)
+-
+</code></pre>
+<h3 id="GTC-的描述"><a href="#GTC-的描述" class="headerlink" title="GTC 的描述"></a>GTC 的描述</h3><pre><code>主要包含四個部分:
+1. GTC階層架構
+    其中又包含
+    a. 切削刀具的階層
+    b. 其他相關特性的列表
+    c.
+    d.給每個節點階層對應類型的圖示
+
+2. 廠商型錄
+
+3.產品資料根據ISO 13399 ，建議使用ISO303-P21的格式，
+每一個獨立的P21檔對應到各個產品
+
+4.參考檔案。例如STEP 3D 模型或是2D的圖檔
+</code></pre>
+<p>檔案資料可以由兩個檔案組成 .P21 &amp; .PLIB (Part Library)<br>    -    PLIB檔<br>    定義了整個產品的特性架構和定義<br>    -    .P21 檔<br>    則針對某個特定的產品各特性中的數值。<br>    除了這些紀錄值，p21檔案也會連結到描述某個特定產品的檔案，例如3D STEP 檔，2D DXF檔</p>
+<pre><code>舉例:  
+PLIB 中，APMX = max drill depth
+.p21 中，APMX = 35 
+</code></pre>
 <ul>
-<li>   切屑材料</li>
-<li>   切屑厚度</li>
-<li>   切屑比(<em>chip compression ratio</em>)</li>
+<li>   刀片</li>
 </ul>
-</li>
-<li><p><strong>形成的基理</strong></p>
-</li>
-<li><p><strong>切屑特性</strong></p>
-<ul>
-<li>可觀察的特性</li>
-</ul>
-</li>
-<li><p><strong>Chip Thinning</strong></p>
-<ul>
-<li>   原理</li>
-<li>   常見的形式</li>
-<li>   應用</li>
-</ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>新標記</th>
+<th>舊標記</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AN</td>
+<td>-</td>
+<td>主切刃</td>
+</tr>
+<tr>
+<td>APMX</td>
+<td>Max. ap</td>
+<td>最大切深</td>
+</tr>
+<tr>
+<td>AS</td>
+<td>A</td>
+<td>副切刃逃隙角</td>
+</tr>
+<tr>
+<td>BW</td>
+<td>B</td>
+<td>本體寬</td>
+</tr>
+<tr>
+<td>BS</td>
+<td>bs</td>
+<td>副切刃(wiper)長度</td>
+</tr>
+<tr>
+<td>CDX</td>
+<td>T max</td>
+<td>最大溝深</td>
+</tr>
+<tr>
+<td>D1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DCONMS</td>
+<td>Ds</td>
+<td></td>
+</tr>
+</tbody></table>
 
     </div>
 
@@ -257,13 +311,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/03/25/CBN/" rel="prev" title="CBN(Cubic Boron Nitride)">
-                  <i class="fa fa-chevron-left"></i> CBN(Cubic Boron Nitride)
+                <a href="/2021/04/05/Tool_wear/" rel="prev" title="<Cutting-Tools>Tool Wear">
+                  <i class="fa fa-chevron-left"></i> <Cutting-Tools>Tool Wear
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/04/Aluminium%20alloy/" rel="next" title="<Material> Aluminium Alloy">
-                  <Material> Aluminium Alloy <i class="fa fa-chevron-right"></i>
+                <a href="/2021/04/10/coordinate_transformation/" rel="next" title="Coordinate transformation">
+                  Coordinate transformation <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
