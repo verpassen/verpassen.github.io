@@ -125,7 +125,7 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2021/04/25/hexo-post-asset-foler/" itemprop="url">hexo - post asset foler</a>
+            <a href="/2021/04/25/hexo-post-asset-test/" itemprop="url">hexo - tag link test</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -139,16 +139,27 @@
         <span class="column is-narrow">
             
             
-            a few seconds lesen (Über 9 Wörter)
+            a few seconds lesen (Über 94 Wörter)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><img src="/hexo-post-asset-foler/example.jpg" class="" width="400" height="300">
+        <html><head></head><body><figure class="highlight markdown hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">試過不行的方式</span><br><span class="line">![](hexo-post-asset<span class="hljs-emphasis">_test/example.jpg)</span></span><br><span class="line"><span class="hljs-emphasis">![](hexo-post-asset_</span>test/博士論文.png)</span><br><span class="line">![](./hexo-post-asset<span class="hljs-emphasis">_test/chipbreaker_</span>01.jpg)</span><br><span class="line">![](/img/ISO13399<span class="hljs-emphasis">_turningTool.jpg)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="照片連結"><a href="#照片連結" class="headerlink" title="照片連結"></a>照片連結</h3><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% img url_img width height %}</span><br></pre></td></tr></tbody></table></figure>
+<p>顯示如下</p>
+<img src="https://pbs.twimg.com/media/EcUmkx7VAAE6-vd?format=jpg&amp;name=large" class="" width="500" height="300">
+
+<h2 id="Youtube-test"><a href="#Youtube-test" class="headerlink" title="Youtube test"></a>Youtube test</h2><figure class="highlight text hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% youtube youtube_ID %}</span><br></pre></td></tr></tbody></table></figure>
+<p>顯示如下</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/sTyIsTZ7NcM" frameborder="0" loading="lazy" allowfullscreen=""></iframe></div>
 
 
-<h2 id="Youtube-test"><a href="#Youtube-test" class="headerlink" title="Youtube test"></a>Youtube test</h2></body></html>
+<h2 id="post-asset-test"><a href="#post-asset-test" class="headerlink" title="post-asset test"></a>post-asset test</h2><p><img src="/2021/04/25/hexo-post-asset-test/example.jpg"><br><img src="/2021/04/25/hexo-post-asset-test/%E5%8D%9A%E5%A3%AB%E8%AB%96%E6%96%87.png"> </p>
+
+
+</body></html>
     
     </div>
     
@@ -234,7 +245,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<p><img src="chipbreaker_01.jpg" alt="|200"><br><img src="ISO13399_insert.jpg" alt="|200"></p>
+<p><img src="/2021/04/24/tungaloy_chip_breaker/chipbreaker_01.jpg" alt="|200"><br><img src="/2021/04/24/tungaloy_chip_breaker/ISO13399_insert.jpg" alt="|200"></p>
 <h3 id="Negative-Type"><a href="#Negative-Type" class="headerlink" title="Negative Type"></a>Negative Type</h3></body></html>
     
     </div>
@@ -1036,13 +1047,38 @@
         <span class="column is-narrow">
             
             
-            a few seconds lesen (Über 0 Wörter)
+            a few seconds lesen (Über 34 Wörter)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        
+        <html><head></head><body><h2 id="configuration-code-for-machine-tools"><a href="#configuration-code-for-machine-tools" class="headerlink" title="configuration code for machine tools"></a>configuration code for machine tools</h2><ul>
+<li>   coordinate transformation matrices</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Translation</th>
+<th>Rotation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>X</td>
+<td>$$A^1_x = \begin{bmatrix}</td>
+<td></td>
+</tr>
+</tbody></table>
+<pre><code>            1&amp;0&amp;0&amp;x \\ 
+            0&amp;1&amp;0&amp;0 \\ 
+            0&amp;0&amp;1&amp;0 \\ 
+            0&amp;0&amp;0&amp;1 \\ 
+        \end{bmatrix} $$| 
+</code></pre>
+<p>|Y|$$A^2_y = \begin{bmatrix} 1&amp;0&amp;0&amp;0 \ 0&amp;1&amp;0&amp;y \ 0&amp;0&amp;1&amp;0\ 0&amp;0&amp;0&amp;1 \ \end{bmatrix} $$|<br>|Z|$$A^3_z = \begin{bmatrix} 1&amp;0&amp;0&amp;0 \ 0&amp;1&amp;0&amp;0 \ 0&amp;0&amp;1&amp;z\ 0&amp;0&amp;0&amp;1 \ \end{bmatrix} $$| 
+ </p>
+</body></html>
     
     </div>
     
@@ -1070,7 +1106,7 @@
         <span class="column is-narrow">
             
             
-            3 minutes lesen (Über 413 Wörter)
+            3 minutes lesen (Über 414 Wörter)
         </span>
         
     </div>
@@ -1156,7 +1192,7 @@ PLIB 中，APMX = max drill depth
 </tr>
 <tr>
 <td>IC</td>
-<td>$$\phi D$$</td>
+<td>$$\phi D{center}$$</td>
 <td>內接圓直徑</td>
 </tr>
 <tr>
@@ -1448,7 +1484,7 @@ T10: 高溫加工 &gt; 冷卻 &gt;人工時效
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
                 &copy; 2021 Brent Chang&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                Разработано на базе <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
                         target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
             </div>
             <div class="column is-hidden-mobile"></div>

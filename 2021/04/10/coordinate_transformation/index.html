@@ -18,13 +18,15 @@
 
 
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="configuration code for machine tools    coordinate transformation matrices      Translation Rotation    X $$A^1_x &#x3D; \begin{bmatrix}                1&amp;0&amp;0&amp;x \\              0&amp;1&amp;0&amp;amp">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Coordinate transformation">
 <meta property="og:url" content="https://verpassen.github.io/2021/04/10/coordinate_transformation/index.html">
 <meta property="og:site_name" content="Brent&#39;s Hexo">
+<meta property="og:description" content="configuration code for machine tools    coordinate transformation matrices      Translation Rotation    X $$A^1_x &#x3D; \begin{bmatrix}                1&amp;0&amp;0&amp;x \\              0&amp;1&amp;0&amp;amp">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-04-10T14:52:20.095Z">
-<meta property="article:modified_time" content="2021-04-25T05:23:48.926Z">
+<meta property="article:modified_time" content="2021-04-26T13:42:32.846Z">
 <meta property="article:author" content="Brent Chang">
 <meta property="article:tag" content="note">
 <meta name="twitter:card" content="summary">
@@ -116,6 +118,10 @@
                 <div class="navbar-dropdown is-right">
                     
                     
+                    
+                    
+                    <a class="navbar-item" href="#configuration-code-for-machine-tools">1&nbsp;&nbsp;<b>configuration code for machine tools</b></a>
+                    
                 </div>
             </div>
             
@@ -150,13 +156,38 @@
         <span class="column is-narrow">
             
             
-            a few seconds lesen (Über 0 Wörter)
+            a few seconds lesen (Über 34 Wörter)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        
+        <html><head></head><body><h2 id="configuration-code-for-machine-tools"><a href="#configuration-code-for-machine-tools" class="headerlink" title="configuration code for machine tools"></a>configuration code for machine tools</h2><ul>
+<li>   coordinate transformation matrices</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Translation</th>
+<th>Rotation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>X</td>
+<td>$$A^1_x = \begin{bmatrix}</td>
+<td></td>
+</tr>
+</tbody></table>
+<pre><code>            1&amp;0&amp;0&amp;x \\ 
+            0&amp;1&amp;0&amp;0 \\ 
+            0&amp;0&amp;1&amp;0 \\ 
+            0&amp;0&amp;0&amp;1 \\ 
+        \end{bmatrix} $$| 
+</code></pre>
+<p>|Y|$$A^2_y = \begin{bmatrix} 1&amp;0&amp;0&amp;0 \ 0&amp;1&amp;0&amp;y \ 0&amp;0&amp;1&amp;0\ 0&amp;0&amp;0&amp;1 \ \end{bmatrix} $$|<br>|Z|$$A^3_z = \begin{bmatrix} 1&amp;0&amp;0&amp;0 \ 0&amp;1&amp;0&amp;0 \ 0&amp;0&amp;1&amp;z\ 0&amp;0&amp;0&amp;1 \ \end{bmatrix} $$| 
+ </p>
+</body></html>
     
     </div>
     
@@ -218,7 +249,7 @@
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
                 &copy; 2021 Brent Chang&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                Разработано на базе <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
                         target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
             </div>
             <div class="column is-hidden-mobile"></div>
