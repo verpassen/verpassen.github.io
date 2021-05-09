@@ -432,6 +432,9 @@ figure.highlight {
     height: 100%;
     position: absolute; }
 
+MathJax_Display {
+  text-algin: left; }
+
 .ins-section-container {
   position: relative;
   background: #f7f7f7; }
