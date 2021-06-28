@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Category: Standard - Brent&#39;s Hexo</title>
+<title>Catégorie: Standard - Brent&#39;s Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -105,7 +105,7 @@
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="Chercher" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -135,7 +135,346 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2021/05/30/threading-pitch/" itemprop="url">螺紋</a>
+            <a href="/2021/06/26/BT-vs-CAT/" itemprop="url">BT vs. CAT(doing)</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2021-06-26T01:41:50.000Z" itemprop="datePublished">Jun 26 2021</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Standard/">Standard</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes lire (À propos 330 mots)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><h2 id="定義"><a href="#定義" class="headerlink" title="定義"></a>定義</h2><p>標題所提到的BT 與 CAT 都是CNC 銑床中會使用到的刀柄系統。<br>其中 BT 為日本所訂的標準，CAT 則為美國，當然還有其他的系統規格，<br>例如: HSK、PSC(Capto)、BBT 等</p>
+<p>比較這些不同的系統，可以寫一大篇了。<br>這篇就先比較BT和CAT，其他的就後續再補上</p>
+<h2 id="刀柄相關規範"><a href="#刀柄相關規範" class="headerlink" title="刀柄相關規範"></a>刀柄相關規範</h2><ul>
+<li>   CAT  - ASME B5.50-2009</li>
+<li>   BT - JIS B6339-1986</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>DIN69871</li>
+<li>DIN6391 關於用於刀柄上筒夾的相關規定</li>
+</ul>
+<h2 id="相同點"><a href="#相同點" class="headerlink" title="相同點"></a>相同點</h2><ol>
+<li>7/24 taper     </li>
+</ol>
+<img src="/2021/06/26/BT-vs-CAT/ConeNorm.JPG" alt="Cone Iso Norm" width="400" height="300">
+
+<table>
+<thead>
+<tr>
+<th>ISO</th>
+<th>L</th>
+<th>dA-dB</th>
+<th>AT 3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>30</td>
+<td>42</td>
+<td>12.250</td>
+<td>+ 0.002</td>
+</tr>
+<tr>
+<td>40</td>
+<td>59</td>
+<td>17.208</td>
+<td>+ 0.003</td>
+</tr>
+<tr>
+<td>50</td>
+<td>92</td>
+<td>26.833</td>
+<td>+ 0.004</td>
+</tr>
+</tbody></table>
+<h4 id="Roughness-表面粗糙度"><a href="#Roughness-表面粗糙度" class="headerlink" title="Roughness 表面粗糙度"></a>Roughness 表面粗糙度</h4><p>$$ 錐度平面 \quad R_a \leq 0.2 $$<br>$$ 刀柄平面 \quad R_a \leq 0.4 $$ </p>
+<h4 id="Runout"><a href="#Runout" class="headerlink" title="Runout"></a>Runout</h4><p>刀柄需要符合動平衡規定<br>G6.3 或 G2.5</p>
+<h2 id="差異點"><a href="#差異點" class="headerlink" title="差異點"></a>差異點</h2><ol>
+<li><p>BT的斜錐面長度較CAT來的短，差約4mm ，因此使用的拉釘規格也有所不同 </p>
+</li>
+<li><p>BT的法蘭厚度較厚，換刀機構的夾持fork也會需要變更</p>
+</li>
+<li><p>BT的拉釘鎖固的螺牙是公制的，CAT則是英制</p>
+</li>
+</ol>
+<h2 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h2><table>
+<thead>
+<tr>
+<th>Taper Type</th>
+<th>法蘭直徑(inch)</th>
+<th>法蘭厚度(inch)</th>
+<th>拉釘螺紋規格(直徑-牙距)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BT30</td>
+<td>1.81</td>
+<td>0.787</td>
+<td>M12-1.75</td>
+</tr>
+<tr>
+<td>BT40</td>
+<td>2.48</td>
+<td>0.984</td>
+<td>M16-2.0</td>
+</tr>
+<tr>
+<td>BT50</td>
+<td>3.94</td>
+<td>1.378</td>
+<td>M24-3.0</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Cat40</td>
+<td>2.5</td>
+<td>0.625</td>
+<td>5/8”-11”</td>
+</tr>
+<tr>
+<td>Cat50</td>
+<td>3.87</td>
+<td>0.625</td>
+<td>1”-8”</td>
+</tr>
+<tr>
+<td>Cat60</td>
+<td>5.5</td>
+<td>0.625</td>
+<td>1 1/4”-7”</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://www.parlec.com/Products/Tool-Holding/Specifications/CAT-BT-Specifications-(1)">Parlec PDF</a><br><a target="_blank" rel="noopener" href="http://www.tools-n-gizmos.com/specs/Tapers.html">machine tool shank and tapers</a><br><a target="_blank" rel="noopener" href="https://techniksusa.blogspot.com/2013/01/at3-taper-tolerances.html">What is AT3?</a></p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2021/06/17/threading/" itemprop="url">&lt;螺紋&gt; 尺寸與公差</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2021-06-17T12:54:23.000Z" itemprop="datePublished">Jun 17 2021</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Standard/">Standard</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            2 minutes lire (À propos 333 mots)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><h2 id="螺紋-Screw-Thread"><a href="#螺紋-Screw-Thread" class="headerlink" title="螺紋 Screw Thread"></a>螺紋 Screw Thread</h2><p>主要分兩大類， 公制(Metric screw thread)與英制 (Unitfied inch thread)<br>兩者螺紋的輪廓相同</p>
+<p>都是角度為60</p>
+<h2 id="Thread-profile"><a href="#Thread-profile" class="headerlink" title="Thread profile"></a>Thread profile</h2><p>螺距，代表的意義為當螺絲旋轉一圈，前進/後退的移動距離<br>以下用P代表螺紋的螺距。</p>
+<ul>
+<li>Basic Major Diameter D<sub>maj</sub>:　</li>
+<li>Basic Pitch Diameter D<sub>p</sub>: 基圓直徑</li>
+<li>Basic Minor Diameter D<sub>min</sub>:</li>
+<li>Fundamental Triagle height H:  </li>
+<li>Pitch P: 牙距/螺距</li>
+</ul>
+<img src="/2021/06/17/threading/ISO_and_UTS_Thread_Dimensions.png" width="500" alt="ISO 螺紋">
+
+<p>$$ H = \frac{1}{2\tan\theta}P = \frac{\sqrt{3}}{2}\cdot P \approx 0.866P$$<br>$$ D_{min} = D_{maj} - 2\cdot\frac{5}{8}\cdot H = D_{maj}-\frac{5\sqrt{3}}{8}\cdot P \approx D_{maj}-1.082532\cdot P<br>$$<br>$$D_{p} = D_{maj} - 2\cdot\frac{3}{8}\cdot H=D_{maj}-\frac{3\sqrt{3}}{8}\cdot P \approx D_{maj} - 0.649519\cdot P$$</p>
+<p><img src="https://cloud.degoo.com/share/JVPQo5LQE__I3KBr2vhfvQ" alt="test link"></p>
+<hr>
+<h3 id="粗牙-vs-細牙-Coarse-Vs-Fine"><a href="#粗牙-vs-細牙-Coarse-Vs-Fine" class="headerlink" title="粗牙 vs. 細牙 (Coarse Vs. Fine)"></a>粗牙 vs. 細牙 (Coarse Vs. Fine)</h3><ul>
+<li>   尺寸<table>
+<thead>
+<tr>
+<th align="right">Nominal Diameter D(mm)</th>
+<th align="right">Pitch 螺距P(mm)</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right"></td>
+<td align="right">粗牙</td>
+<td align="right">細牙</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">0.25</td>
+<td align="right">0.2</td>
+</tr>
+<tr>
+<td align="right">1.2</td>
+<td align="right">0.25</td>
+<td align="right">0.2</td>
+</tr>
+<tr>
+<td align="right">1.6</td>
+<td align="right">0.35</td>
+<td align="right">0.2</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">0.40</td>
+<td align="right">0.25</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">0.50</td>
+<td align="right">0.35</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">0.70</td>
+<td align="right">0.50</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="right">0.80</td>
+<td align="right">0.50</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="right">1.00</td>
+<td align="right">0.50</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="right">1.25</td>
+<td align="right">1.00</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="right">1.50</td>
+<td align="right">1.25</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="right">1.75</td>
+<td align="right">1.25</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="right">2.00</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="right">2.00</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="right">2.00</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="right">2.50</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="right">3.00</td>
+<td align="right">2.0</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<hr>
+<h2 id="公差-Tolerance"><a href="#公差-Tolerance" class="headerlink" title="公差 Tolerance"></a>公差 Tolerance</h2><p>外螺紋使用小寫字母(例:5g、5g5h)，內螺紋用大寫(例:4G、4H5H)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>螺絲</th>
+<th>螺帽</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>容許大偏差</td>
+<td>e</td>
+<td></td>
+</tr>
+<tr>
+<td>容許小偏差</td>
+<td>g</td>
+<td>G</td>
+</tr>
+<tr>
+<td>無偏差</td>
+<td>h</td>
+<td>H</td>
+</tr>
+</tbody></table>
+<h3 id="表示法"><a href="#表示法" class="headerlink" title="表示法"></a>表示法</h3><ol>
+<li>單位: 公制(Metric)</li>
+<li>格式: M6X0.75-5g6g</li>
+</ol>
+<p>M6代表螺紋直徑6 公釐(mm)<br>螺距 0.75 mm<br>5 pitch diameter 的公差等級<br>g pitch diameter 的公差帶位置<br>6 牙尖高度的公差等級<br>g 牙尖高度 的公差帶位置</p>
+<hr>
+<h3 id="左螺紋-vs-右螺紋"><a href="#左螺紋-vs-右螺紋" class="headerlink" title="左螺紋 vs. 右螺紋"></a>左螺紋 vs. 右螺紋</h3><hr>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/ISO%E5%85%AC%E5%88%B6%E8%9E%BA%E7%B4%8B">維基百科</a></p>
+<hr>
+<h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><p><a target="_blank" rel="noopener" href="https://www.boltscience.com/index.htm">Bolt Science</a></p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2021/05/30/threading-pitch/" itemprop="url">&lt;螺紋&gt; TPI 換算</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -154,7 +493,7 @@
         <span class="column is-narrow">
             
             
-            2 minutes read (About 316 words)
+            2 minutes lire (À propos 331 mots)
         </span>
         
     </div>
@@ -182,16 +521,6 @@
 <li>Coarse and Fine threading 粗牙 &amp; 細牙<br>舉例而言，M8有 M8 x 1.25 與 M8 x 1.0 </li>
 </ul>
 <hr>
-<h3 id="螺紋尺寸"><a href="#螺紋尺寸" class="headerlink" title="螺紋尺寸"></a>螺紋尺寸</h3><p><img src="/2021/05/30/threading-pitch/threading_iso.JPG" width="300"><br></p>
-<ul>
-<li>Basic Major Diameter D:　</li>
-<li>Basic Pitch Diameter D2: 基圓直徑</li>
-<li>Fundamental Triagle height H:  </li>
-<li>Pitch P: 牙距</li>
-</ul>
-<p>$$ P = 2H \tan{\theta} $$</p>
-<hr>
-<h3 id="公差-Tolerance"><a href="#公差-Tolerance" class="headerlink" title="公差 Tolerance"></a>公差 Tolerance</h3><hr>
 <h2 id="常見的螺紋種類"><a href="#常見的螺紋種類" class="headerlink" title="常見的螺紋種類"></a>常見的螺紋種類</h2><ul>
 <li><p>   ISO(Metric Coarse/Fine screw thread)</p>
 </li>
@@ -218,7 +547,262 @@
 <h2 id="註解"><a href="#註解" class="headerlink" title="註解"></a>註解</h2><ol>
 <li>TPI 也用於表示輪胎編織密度，英文縮寫同樣是Thread per inch，<br>代表一英吋中纖維組織的密度。同樣長度的編織密度越密，表示纖維越細，<br>使用的橡膠就較少。</li>
 </ol>
-<p>2.</p>
+<hr>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><p><a target="_blank" rel="noopener" href="https://www.teesing.com/tw/page/%E8%B3%87%E8%A8%8A%E4%B8%AD%E5%BF%83/%E5%87%BA%E7%89%88%E7%89%A9/%E8%9E%BA%E7%B4%8B%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%B4%B9/other-threads">螺紋圖面</a></p>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2021/04/09/GTC/" itemprop="url">Generic Tool Classification(GTC) (doing)</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2021-04-09T00:34:38.142Z" itemprop="datePublished">Apr 9 2021</time>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Standard/">Standard</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            4 minutes lire (À propos 554 mots)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><h2 id="ISO-13399-Cutting-tool-data-representation-and-exchange"><a href="#ISO-13399-Cutting-tool-data-representation-and-exchange" class="headerlink" title="ISO 13399 (Cutting tool data representation and exchange)"></a>ISO 13399 (Cutting tool data representation and exchange)</h2><pre><code>用於儲存刀具相關的資訊格式，可應用在不同系統CAD、CAM、ERP等等之間數據溝通的媒介
+由於刀具製造商有自己的品項名稱，因此在溝通或是資料庫的儲存上有很大的麻煩。
+
+- [WIKI](https://en.wikipedia.org/wiki/ISO_13399)
+-
+</code></pre>
+<h3 id="GTC-的描述"><a href="#GTC-的描述" class="headerlink" title="GTC 的描述"></a>GTC 的描述</h3><pre><code>主要包含四個部分:
+1. GTC階層架構
+    其中又包含
+    a. 切削刀具的階層
+    b. 其他相關特性的列表
+    c.
+    d.給每個節點階層對應類型的圖示
+
+2. 廠商型錄
+
+3.產品資料根據ISO 13399 ，建議使用ISO303-P21的格式，
+每一個獨立的P21檔對應到各個產品
+
+4.參考檔案。例如STEP 3D 模型或是2D的圖檔
+</code></pre>
+<p>檔案資料可以由兩個檔案組成 .P21 &amp; .PLIB (Part Library)<br>    -    PLIB檔<br>    定義了整個產品的特性架構和定義<br>    -    .P21 檔<br>    則針對某個特定的產品各特性中的數值。<br>    除了這些紀錄值，p21檔案也會連結到描述某個特定產品的檔案，例如3D STEP 檔，2D DXF檔</p>
+<pre><code>舉例:  
+PLIB 中，APMX = max drill depth
+.p21 中，APMX = 35 
+</code></pre>
+<hr>
+<h3 id="刀片"><a href="#刀片" class="headerlink" title="刀片"></a>刀片</h3><table>
+<thead>
+<tr>
+<th>新標記</th>
+<th>舊標記</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AN</td>
+<td>-</td>
+<td>主切刃</td>
+</tr>
+<tr>
+<td>APMX</td>
+<td>Max. ap</td>
+<td>最大切深</td>
+</tr>
+<tr>
+<td>AS</td>
+<td>A</td>
+<td>副切刃逃隙角</td>
+</tr>
+<tr>
+<td>BW</td>
+<td>B</td>
+<td>本體寬</td>
+</tr>
+<tr>
+<td>BS</td>
+<td>bs</td>
+<td>副切刃(wiper)長度</td>
+</tr>
+<tr>
+<td>CDX</td>
+<td>T<sub>max</sub></td>
+<td>最大溝深</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>φd1</td>
+<td>螺絲孔徑</td>
+</tr>
+<tr>
+<td>DCONMS</td>
+<td>D<sub>s</sub></td>
+<td></td>
+</tr>
+<tr>
+<td>IC</td>
+<td>φd</td>
+<td>內接圓直徑</td>
+</tr>
+<tr>
+<td>LE</td>
+<td>A</td>
+<td>有效切刃長</td>
+</tr>
+<tr>
+<td>LF</td>
+<td>L1</td>
+<td>基準長</td>
+</tr>
+<tr>
+<td>PDX</td>
+<td>t</td>
+<td>牙刀刀尖點位置(X方向)</td>
+</tr>
+<tr>
+<td>PDY</td>
+<td>l3</td>
+<td>牙刀刀尖點位置(Y方向)</td>
+</tr>
+<tr>
+<td>RE</td>
+<td>r</td>
+<td>r角大小</td>
+</tr>
+<tr>
+<td>S</td>
+<td>T</td>
+<td>厚度</td>
+</tr>
+</tbody></table>
+<!-- <img src='ISO13399_insert.JPG' title='ISO13399 Insert' width='600' height='800'> -->
+<p><img src="/2021/04/09/GTC/ISO13399_insert.JPG" alt="ISO13999 Insert"></p>
+<table>
+<thead>
+<tr>
+<th>新標記</th>
+<th>舊標記</th>
+<th>內容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td><strong>銑削</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>APMX</td>
+<td>Max. ap</td>
+<td>最大切深</td>
+</tr>
+<tr>
+<td>BD</td>
+<td>φD1,φD2,φD3</td>
+<td>刀具本體外徑</td>
+</tr>
+<tr>
+<td>DMIN</td>
+<td>φD<sub>m</sub></td>
+<td>最小加工徑</td>
+</tr>
+<tr>
+<td>DCONMS</td>
+<td>φD</td>
+<td></td>
+</tr>
+<tr>
+<td>DCONWS</td>
+<td>φD,φd<sub>2</sub></td>
+<td></td>
+</tr>
+<tr>
+<td>DCSFMS</td>
+<td>φD<sub>b</sub></td>
+<td></td>
+</tr>
+<tr>
+<td>KAPR</td>
+<td>-</td>
+<td>最大溝槽加工直徑</td>
+</tr>
+<tr>
+<td>KWW</td>
+<td>a</td>
+<td>鍵槽寬度</td>
+</tr>
+<tr>
+<td>LF</td>
+<td>L1</td>
+<td>刀具本體長度</td>
+</tr>
+<tr>
+<td>NOF</td>
+<td>z</td>
+<td>刃數</td>
+</tr>
+<tr>
+<td>LF</td>
+<td>L1</td>
+<td>刀具本體長度</td>
+</tr>
+<tr>
+<td>WT</td>
+<td>Kg</td>
+<td>重量</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>銑槽</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>CDX</td>
+<td>Max. ae</td>
+<td>最大溝槽加工深度</td>
+</tr>
+<tr>
+<td>CW</td>
+<td>W</td>
+<td></td>
+</tr>
+<tr>
+<td>CWN</td>
+<td>-</td>
+<td>最小溝槽加工直徑</td>
+</tr>
+<tr>
+<td>CWX</td>
+<td>-</td>
+<td>最大溝槽加工直徑</td>
+</tr>
+</tbody></table>
+<p><img src="/2021/04/09/GTC/ISO13399_millingTool.JPG" alt="ISO13999 Milling Tool"></p>
+<hr>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><p><a href="">Sandvik Coromeant GTC Guidelines</a><br><embed src="GTC-WP-Version-1-White-Paper.pdf" type="application/pdf" width="1200" height="800"></p>
 </body></html>
     
     </div>
@@ -412,7 +996,7 @@
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Que voulez-vous chercher ?" />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -426,9 +1010,9 @@
             TRANSLATION: {
                 POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
+                CATEGORIES: 'Catégories',
                 TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                UNTITLED: '(Sans Titre)',
             },
             CONTENT_URL: '/content.json',
         };

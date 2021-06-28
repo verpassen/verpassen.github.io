@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>&lt;Cutting-Tools&gt;Theoretical Surface Roughness - Brent&#39;s Hexo</title>
+<title>&lt;螺紋&gt; 尺寸與公差 - Brent&#39;s Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -18,18 +18,21 @@
 
 
 
-    <meta name="description" content="單位    Ra 基準長度內取算術平均     Rz 十點平均    Rmax  $$4R_a \approx R_z \approx R_{max}$$$$\int_{a}^{b} x^2$$ 計算式$$ Theoretical\ Surface\ Roughness\ (\mu m) &#x3D; \frac{1000f^2}{8r}$$    $$f : feed\ rate\ (mm&#x2F;rev)$$">
+    <meta name="description" content="螺紋 Screw Thread主要分兩大類， 公制(Metric screw thread)與英制 (Unitfied inch thread)兩者螺紋的輪廓相同 都是角度為60 Thread profile螺距，代表的意義為當螺絲旋轉一圈，前進&#x2F;後退的移動距離以下用P代表螺紋的螺距。  Basic Major Diameter Dmaj:　 Basic Pitch Diameter Dp: 基圓">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&lt;Cutting-Tools&gt;Theoretical Surface Roughness">
-<meta property="og:url" content="https://verpassen.github.io/2021/03/21/Theoretical-Surface-Roughness/index.html">
+<meta property="og:title" content="&lt;螺紋&gt; 尺寸與公差">
+<meta property="og:url" content="https://verpassen.github.io/2021/06/17/threading/index.html">
 <meta property="og:site_name" content="Brent&#39;s Hexo">
-<meta property="og:description" content="單位    Ra 基準長度內取算術平均     Rz 十點平均    Rmax  $$4R_a \approx R_z \approx R_{max}$$$$\int_{a}^{b} x^2$$ 計算式$$ Theoretical\ Surface\ Roughness\ (\mu m) &#x3D; \frac{1000f^2}{8r}$$    $$f : feed\ rate\ (mm&#x2F;rev)$$">
+<meta property="og:description" content="螺紋 Screw Thread主要分兩大類， 公制(Metric screw thread)與英制 (Unitfied inch thread)兩者螺紋的輪廓相同 都是角度為60 Thread profile螺距，代表的意義為當螺絲旋轉一圈，前進&#x2F;後退的移動距離以下用P代表螺紋的螺距。  Basic Major Diameter Dmaj:　 Basic Pitch Diameter Dp: 基圓">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-03-21T13:14:04.663Z">
-<meta property="article:modified_time" content="2021-06-14T06:45:25.633Z">
+<meta property="og:image" content="https://verpassen.github.io/2021/06/17/threading/ISO_and_UTS_Thread_Dimensions.png">
+<meta property="og:image" content="https://cloud.degoo.com/share/JVPQo5LQE__I3KBr2vhfvQ">
+<meta property="article:published_time" content="2021-06-17T12:54:23.000Z">
+<meta property="article:modified_time" content="2021-06-20T14:25:40.887Z">
 <meta property="article:author" content="Brent Chang">
 <meta property="article:tag" content="note">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://verpassen.github.io/2021/06/17/threading/ISO_and_UTS_Thread_Dimensions.png">
 
 
 
@@ -123,19 +126,43 @@
                     
                     
                     
-                    <a class="navbar-item" href="#單位">1&nbsp;&nbsp;<b>單位</b></a>
+                    <a class="navbar-item" href="#螺紋-Screw-Thread">1&nbsp;&nbsp;<b>螺紋 Screw Thread</b></a>
                     
                     
                     <hr class="navbar-divider">
                     
                     
-                    <a class="navbar-item" href="#計算式">2&nbsp;&nbsp;<b>計算式</b></a>
+                    <a class="navbar-item" href="#Thread-profile">2&nbsp;&nbsp;<b>Thread profile</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#粗牙-vs-細牙-Coarse-Vs-Fine">2.1&nbsp;&nbsp;粗牙 vs. 細牙 (Coarse Vs. Fine)</a>
                     
                     
                     <hr class="navbar-divider">
                     
                     
-                    <a class="navbar-item" href="#參考">3&nbsp;&nbsp;<b>參考</b></a>
+                    <a class="navbar-item" href="#公差-Tolerance">3&nbsp;&nbsp;<b>公差 Tolerance</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#表示法">3.1&nbsp;&nbsp;表示法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#左螺紋-vs-右螺紋">3.2&nbsp;&nbsp;左螺紋 vs. 右螺紋</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#參考資料">4&nbsp;&nbsp;<b>參考資料</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#延伸閱讀">5&nbsp;&nbsp;<b>延伸閱讀</b></a>
                     
                 </div>
             </div>
@@ -157,111 +184,179 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            &lt;Cutting-Tools&gt;Theoretical Surface Roughness
+            &lt;螺紋&gt; 尺寸與公差
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
             
-                <time datetime="2021-03-21T13:14:04.663Z" itemprop="datePublished">Mar 21 2021</time>
+                <time datetime="2021-06-17T12:54:23.000Z" itemprop="datePublished">Jun 17 2021</time>
             
         </span>
         
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/Roughness/">Roughness</a>
+            <a class="article-category-link" href="/categories/Standard/">Standard</a>
         </span>
         
         
         <span class="column is-narrow">
             
             
-            a few seconds lire (À propos 91 mots)
+            2 minutes lire (À propos 333 mots)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><h2 id="單位"><a href="#單位" class="headerlink" title="單位"></a>單位</h2><ul>
-<li>   Ra 基準長度內取算術平均 </li>
-<li>   Rz 十點平均</li>
-<li>   Rmax</li>
+        <html><head></head><body><h2 id="螺紋-Screw-Thread"><a href="#螺紋-Screw-Thread" class="headerlink" title="螺紋 Screw Thread"></a>螺紋 Screw Thread</h2><p>主要分兩大類， 公制(Metric screw thread)與英制 (Unitfied inch thread)<br>兩者螺紋的輪廓相同</p>
+<p>都是角度為60</p>
+<h2 id="Thread-profile"><a href="#Thread-profile" class="headerlink" title="Thread profile"></a>Thread profile</h2><p>螺距，代表的意義為當螺絲旋轉一圈，前進/後退的移動距離<br>以下用P代表螺紋的螺距。</p>
+<ul>
+<li>Basic Major Diameter D<sub>maj</sub>:　</li>
+<li>Basic Pitch Diameter D<sub>p</sub>: 基圓直徑</li>
+<li>Basic Minor Diameter D<sub>min</sub>:</li>
+<li>Fundamental Triagle height H:  </li>
+<li>Pitch P: 牙距/螺距</li>
 </ul>
-<p>$$4R_a \approx R_z \approx R_{max}$$<br>$$\int_{a}^{b} x^2$$</p>
-<h2 id="計算式"><a href="#計算式" class="headerlink" title="計算式"></a>計算式</h2><p>$$ Theoretical\ Surface\ Roughness\ (\mu m) = \frac{1000f^2}{8r}$$<br>    $$f : feed\ rate\ (mm/rev)$$<br>    $$r : radius\ of\ the\ insert (mm)$$</p>
-<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><table>
+<img src="/2021/06/17/threading/ISO_and_UTS_Thread_Dimensions.png" width="500" alt="ISO 螺紋">
+
+<p>$$ H = \frac{1}{2\tan\theta}P = \frac{\sqrt{3}}{2}\cdot P \approx 0.866P$$<br>$$ D_{min} = D_{maj} - 2\cdot\frac{5}{8}\cdot H = D_{maj}-\frac{5\sqrt{3}}{8}\cdot P \approx D_{maj}-1.082532\cdot P<br>$$<br>$$D_{p} = D_{maj} - 2\cdot\frac{3}{8}\cdot H=D_{maj}-\frac{3\sqrt{3}}{8}\cdot P \approx D_{maj} - 0.649519\cdot P$$</p>
+<p><img src="https://cloud.degoo.com/share/JVPQo5LQE__I3KBr2vhfvQ" alt="test link"></p>
+<hr>
+<h3 id="粗牙-vs-細牙-Coarse-Vs-Fine"><a href="#粗牙-vs-細牙-Coarse-Vs-Fine" class="headerlink" title="粗牙 vs. 細牙 (Coarse Vs. Fine)"></a>粗牙 vs. 細牙 (Coarse Vs. Fine)</h3><ul>
+<li>   尺寸<table>
 <thead>
 <tr>
-<th>Roughness Value Ra(mm)</th>
-<th>Roughness Value(in)</th>
-<th>Grade No.</th>
+<th align="right">Nominal Diameter D(mm)</th>
+<th align="right">Pitch 螺距P(mm)</th>
+<th align="right"></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>50</td>
-<td>2000</td>
-<td>N12</td>
+<td align="right"></td>
+<td align="right">粗牙</td>
+<td align="right">細牙</td>
 </tr>
 <tr>
-<td>25</td>
-<td>1000</td>
-<td>N11</td>
+<td align="right">1</td>
+<td align="right">0.25</td>
+<td align="right">0.2</td>
 </tr>
 <tr>
-<td>12.5</td>
-<td>500</td>
-<td>N10</td>
+<td align="right">1.2</td>
+<td align="right">0.25</td>
+<td align="right">0.2</td>
 </tr>
 <tr>
-<td>6.3</td>
-<td>250</td>
-<td>N9</td>
+<td align="right">1.6</td>
+<td align="right">0.35</td>
+<td align="right">0.2</td>
 </tr>
 <tr>
-<td>3.2</td>
-<td>125</td>
-<td>N8</td>
+<td align="right">2</td>
+<td align="right">0.40</td>
+<td align="right">0.25</td>
 </tr>
 <tr>
-<td>1.6</td>
-<td>63</td>
-<td>N7</td>
+<td align="right">3</td>
+<td align="right">0.50</td>
+<td align="right">0.35</td>
 </tr>
 <tr>
-<td>0.8</td>
-<td>32</td>
-<td>N6</td>
+<td align="right">4</td>
+<td align="right">0.70</td>
+<td align="right">0.50</td>
 </tr>
 <tr>
-<td>0.4</td>
-<td>16</td>
-<td>N5</td>
+<td align="right">5</td>
+<td align="right">0.80</td>
+<td align="right">0.50</td>
 </tr>
 <tr>
-<td>0.2</td>
-<td>8</td>
-<td>N4</td>
+<td align="right">6</td>
+<td align="right">1.00</td>
+<td align="right">0.50</td>
 </tr>
 <tr>
-<td>0.1</td>
-<td>4</td>
-<td>N3</td>
+<td align="right">8</td>
+<td align="right">1.25</td>
+<td align="right">1.00</td>
 </tr>
 <tr>
-<td>0.05</td>
-<td>2</td>
-<td>N2</td>
+<td align="right">10</td>
+<td align="right">1.50</td>
+<td align="right">1.25</td>
 </tr>
 <tr>
-<td>0.025</td>
-<td>1</td>
-<td>N1</td>
+<td align="right">12</td>
+<td align="right">1.75</td>
+<td align="right">1.25</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="right">2.00</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="right">2.00</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="right">2.00</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="right">2.50</td>
+<td align="right">1.5</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="right">3.00</td>
+<td align="right">2.0</td>
 </tr>
 </tbody></table>
-<ul>
-<li>   ISO 1302</li>
-<li>   <a target="_blank" rel="noopener" href="https://www.keyence.com.tw/ss/products/microscope/roughness/line/">Keyence 小教室</a></li>
+</li>
 </ul>
+<hr>
+<h2 id="公差-Tolerance"><a href="#公差-Tolerance" class="headerlink" title="公差 Tolerance"></a>公差 Tolerance</h2><p>外螺紋使用小寫字母(例:5g、5g5h)，內螺紋用大寫(例:4G、4H5H)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>螺絲</th>
+<th>螺帽</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>容許大偏差</td>
+<td>e</td>
+<td></td>
+</tr>
+<tr>
+<td>容許小偏差</td>
+<td>g</td>
+<td>G</td>
+</tr>
+<tr>
+<td>無偏差</td>
+<td>h</td>
+<td>H</td>
+</tr>
+</tbody></table>
+<h3 id="表示法"><a href="#表示法" class="headerlink" title="表示法"></a>表示法</h3><ol>
+<li>單位: 公制(Metric)</li>
+<li>格式: M6X0.75-5g6g</li>
+</ol>
+<p>M6代表螺紋直徑6 公釐(mm)<br>螺距 0.75 mm<br>5 pitch diameter 的公差等級<br>g pitch diameter 的公差帶位置<br>6 牙尖高度的公差等級<br>g 牙尖高度 的公差帶位置</p>
+<hr>
+<h3 id="左螺紋-vs-右螺紋"><a href="#左螺紋-vs-右螺紋" class="headerlink" title="左螺紋 vs. 右螺紋"></a>左螺紋 vs. 右螺紋</h3><hr>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/ISO%E5%85%AC%E5%88%B6%E8%9E%BA%E7%B4%8B">維基百科</a></p>
+<hr>
+<h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><p><a target="_blank" rel="noopener" href="https://www.boltscience.com/index.htm">Bolt Science</a></p>
 </body></html>
     
     </div>
@@ -270,12 +365,12 @@
     <div class="columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <a href="/2021/03/25/CBN/">CBN(Cubic Boron Nitride)</a>
+            <a href="/2021/06/26/BT-vs-CAT/">BT vs. CAT(doing)</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <a href="/2021/03/21/Type-of-the-chips/">&lt;Cutting-Tools&gt;Type of the chips</a>
+            <a href="/2021/06/01/Face-Grooving/">Face_Grooving</a>
             
         </span>
     </div>
@@ -297,8 +392,8 @@
     
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://verpassen.github.io/2021/03/21/Theoretical-Surface-Roughness/';
-        this.page.identifier = '2021/03/21/Theoretical-Surface-Roughness/';
+        this.page.url = 'https://verpassen.github.io/2021/06/17/threading/';
+        this.page.identifier = '2021/06/17/threading/';
         
         this.language = 'en';
         
