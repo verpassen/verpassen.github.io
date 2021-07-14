@@ -1,0 +1,28 @@
+<html><head></head><body>div.gallery-list{
+	margin-top: 30px;
+}
+
+div.gallery-column{
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+div.gallery-item{
+	margin: 25px auto 10px 5px ;
+	max-width:80%;
+	color:black;
+	background: rgba(255,255,255,.3);
+	border:.5px solid black;
+ 	box-shadow: 5px #88888;
+	float:left;
+}
+
+@media(max-width: 767px){
+	.gallery-item{
+		min-width: 75px;
+		font-size: 13px;
+	}
+
+} 
+
+ </body></html>
