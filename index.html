@@ -60,6 +60,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -81,6 +84,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
 
 
 
@@ -115,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -142,6 +149,225 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/03/Yaml-introduce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Brent Chang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/03/03/Yaml-introduce/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-03-03 22:08:33 / Modified: 22:09:16" itemprop="dateCreated datePublished" datetime="2024-03-03T22:08:33+08:00">2024-03-03</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/03/03/Yaml-introduce/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/03/03/Yaml-introduce/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="YAML檔"><a href="#YAML檔" class="headerlink" title="YAML檔"></a>YAML檔</h1><h2 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h2><ul>
+<li><p>KEY-VALUE 型式</p>
+</li>
+<li><p>可用來表示儲存資料</p>
+</li>
+<li><p>易讀</p>
+</li>
+<li><p>表示方式</p>
+<ul>
+<li>映射 mapping <blockquote>
+<p>以 冒號(:) 分開，KEY 和 VALUE ，冒號後方還需添加一個空格</p>
+</blockquote>
+</li>
+<li>清單 sequence </li>
+<li>資料型態 scalar<br>可以混和這三種型式，來組合成所需要的資料結構。</li>
+</ul>
+</li>
+</ul>
+<p> sequence + scalar </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Mark</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">John</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Amy</span></span><br></pre></td></tr></table></figure>
+
+<p>sequence + mapping</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> </span><br><span class="line">	<span class="attr">name:</span> <span class="string">Tom</span></span><br><span class="line">	<span class="attr">height:</span> <span class="number">180</span></span><br><span class="line">	<span class="attr">weight:</span> <span class="number">80</span></span><br><span class="line"><span class="bullet">-</span> </span><br><span class="line">	<span class="attr">name:</span> <span class="string">Jimmy</span></span><br><span class="line">	<span class="attr">height:</span> <span class="number">175</span></span><br><span class="line">	<span class="attr">weight:</span> <span class="number">70</span></span><br></pre></td></tr></table></figure>
+
+<p>sequence + sequence</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [<span class="string">name</span>, <span class="string">age</span>, <span class="string">gender</span>]</span><br><span class="line"><span class="bullet">-</span> [<span class="string">Tom</span>, <span class="number">25</span>, <span class="string">M</span>]</span><br><span class="line"><span class="bullet">-</span> [<span class="string">Amy</span>, <span class="number">28</span>, <span class="string">F</span>]</span><br></pre></td></tr></table></figure>
+
+<pre><code>- YAML 會自動判斷該VALUE 是哪種型態，但若想要特別指定解讀的資料型態，可以加上一些符號作為指定。
+</code></pre>
+  <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">A:</span> <span class="number">123</span>  <span class="comment">#整數</span></span><br><span class="line"><span class="attr">B:</span> <span class="type">!!str</span> <span class="number">123</span> <span class="comment">#利用!! ，指定型式為字串</span></span><br><span class="line"><span class="attr">C:</span> <span class="string">Hello</span> <span class="string">World</span> <span class="comment">#字串</span></span><br><span class="line"><span class="attr">D:</span> <span class="string">&quot;John&quot;</span> <span class="comment">#利用雙引號，指定為字串</span></span><br><span class="line"><span class="attr">E:</span> <span class="number">123.5</span> <span class="comment"># 符點數</span></span><br><span class="line">	<span class="attr">F:</span> <span class="type">!!float</span> <span class="number">123.5</span> <span class="comment">#符點數</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>註解<br>   使用# 作為單行註解</li>
+</ul>
+<h2 id="Python-module"><a href="#Python-module" class="headerlink" title="Python module"></a>Python module</h2><ul>
+<li>安裝 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyyaml</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="教學資源"><a href="#教學資源" class="headerlink" title="教學資源"></a>教學資源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/yaml-intro.html">YAML 入門課程</a></li>
+</ul>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://yaml.org/">official Yaml website</a></li>
+<li><a target="_blank" rel="noopener" href="https://pyrseas.readthedocs.io/en/latest/dbtoyaml.html">db to yaml</a></li>
+<li><a target="_blank" rel="noopener" href="https://yaml.org/spec/1.2.2/">YAML Ver. 1.2</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/25/Maragoni-effect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Brent Chang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/25/Maragoni-effect/" class="post-title-link" itemprop="url">Maragoni effect</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-02-25 13:02:37 / Modified: 04:59:32" itemprop="dateCreated datePublished" datetime="2024-02-25T13:02:37+08:00">2024-02-25</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/02/25/Maragoni-effect/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/02/25/Maragoni-effect/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Maragoni-effect"><a href="#Maragoni-effect" class="headerlink" title="Maragoni effect"></a>Maragoni effect</h1><h1 id="現象說明"><a href="#現象說明" class="headerlink" title="現象說明"></a>現象說明</h1><blockquote>
+<p>The Marangoni effect is the mass transfer along an interface between two fluids due to the surface tension gradient (which fluid from areas with low surface tension is transferred to areas with higher surface tension).<br>由於溫度梯度的關係，造成區域表面張力的差異，而形成一個流動傳導的驅力。<br>DED 中的溫度梯度，則是由於移動的熱源與冷卻速率造成的。</p>
+</blockquote>
+<h2 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h2><p>表面張力的溫度梯度若為正，表示表面張力隨著溫度越高越大。</p>
+<p>表面張力的溫度梯度若為負，表示表面張力隨著溫度越高越小。<br><img src='https://amarineblog.files.wordpress.com/2021/06/marangoni-effect-in-welding-gtaw.png' width=60%></p>
+<p>對於大部分鋼材，表面張力的溫度係數，受材料中硫含量的影響。<br>如果硫含量小於30 ppm ，dγ &#x2F; dT &lt; 0，溶池易向外擴散，形成較低穿透深度的溶池形狀。<br>如果硫含量大於60 ppm ，dγ &#x2F; dT &gt; 0，溶池易向內集中，形成較深的穿透深度的溶池。<br>但也容易使得空氣不易逸散，而形成孔隙(porosity)</p>
+<h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://amarineblog.com/2021/06/28/what-is-marangoni-effect-in-gtaw-welding/">What is Marangoni effect in GTAW welding</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
