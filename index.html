@@ -122,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -149,6 +149,139 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/15/blade-geometry/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Brent Chang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/15/blade-geometry/" class="post-title-link" itemprop="url">blade geometry</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-12-15 11:11:20 / Modified: 11:13:33" itemprop="dateCreated datePublished" datetime="2024-12-15T11:11:20+08:00">2024-12-15</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/12/15/blade-geometry/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/12/15/blade-geometry/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>葉片幾何外觀幾個重要的部位稱呼</p>
+<ul>
+<li>Leading Edge (LE)</li>
+<li>Trailing Edge(TE)</li>
+<li>Suction Side (SE)</li>
+<li>Pressure Side (PS)</li>
+<li>chord</li>
+</ul>
+<p><img src="/:/4e6697783e0f4e77ad3ad43a9c5129ba" alt="b2f97757d466609dacf6566143f9e7e4.png"></p>
+<p><img src="/:/75fc2d87d7234644afc4c0f245adbd8a" alt="1cbfb236f05bb239eba42047728dd945.png"></p>
+<ul>
+<li><p>利用7個圓弧定義葉片輪廓 - seven arcs method</p>
+<blockquote>
+<p>利用7個相切的圓弧定義出葉片的剖面形狀<br><a href=":/2bd56207de2349a8b21ce532f388f3a7">seven arc method</a></p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/NACA_airfoil">NACA - National Advisory Committtee for Aeronautics airfoils</a><br>利用數學公式定義camber line上葉片輪廓的厚度的一套系統方法<br>標示上NACA 後面會有四碼數字代表剖面幾何的重要參數<br>因此，資訊處理上，就可以根據這樣的編號系統來做分類與搜尋</p>
+</li>
+</ul>
+<p>註: [Camber line]</p>
+<h2 id="Camber-line"><a href="#Camber-line" class="headerlink" title="Camber line"></a>Camber line</h2><p>設計airfoil時的一條假想線。通過Leading edge 和 trailing edge ，把airfoil 分成上下兩半部<br>定義翼型的曲率，翼弦(chord)為中線，而camber 大小定義了在沿著弦移動過程，翼型特徵偏離弦的距離大小或說是厚度。</p>
+<p>當翼型是完全對稱的時候,camber 也就是0 。 </p>
+<p><img src="https://www1.grc.nasa.gov/wp-content/uploads/wing.gif"></p>
+<h2 id="閱讀"><a href="#閱讀" class="headerlink" title="閱讀"></a>閱讀</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://flying609.wordpress.com/2021/05/16/%E7%A9%BA%E5%8B%95%E8%B6%85%E5%85%A5%E9%96%809-%E5%B8%B8%E8%A6%8B%E7%9A%84%E7%BF%BC%E5%BD%A2%E5%8F%8A%E5%85%B6%E7%89%B9%E9%BB%9E-common-airfoil-shapes/">空動超入門9-常見的翼形及其特點</a></li>
+<li><a target="_blank" rel="noopener" href="https://ntrs.nasa.gov/api/citations/19930090976/downloads/19930090976.pdf">Summary of airfoil data</a></li>
+</ul>
+<hr>
+<p>blade with internal coolant<br><img src="/:/f608c2d38a3843308e19e5a1e71229db" alt="ed55353568fd5dfb1a9cf7850a521784.png"></p>
+<h2 id="Segmentation-and-Constrained-Fitting-Algorithm-SCFA"><a href="#Segmentation-and-Constrained-Fitting-Algorithm-SCFA" class="headerlink" title="Segmentation and Constrained Fitting Algorithm(SCFA)"></a>Segmentation and Constrained Fitting Algorithm(SCFA)</h2><p>相關文獻</p>
+<ul>
+<li><p><ref><a target="_blank" rel="noopener" href="https://10.0.3.239/s00170-006-0406-9">Mohaghegh K, Sadeghi M H, Abdullah A. Reverse engineering of turbine blades based on design intent. International Journal of Advanced Manufacturing Technology. 2007; 32(9-10): 1009-1020.</a></p>
+</li>
+<li><p><ref> <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0167839601000851">Constrained fitting in reverse engineering</a></p>
+</li>
+<li><p><ref><a target="_blank" rel="noopener" href="http://boole.stanford.edu/pub/fit.pdf">Direct Least-Squares Fitting of Algebraic Surfaces</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="Constraints-based-nonrigid-registration-method"><a href="#Constraints-based-nonrigid-registration-method" class="headerlink" title="Constraints based nonrigid registration method"></a>Constraints based nonrigid registration method</h2><h2 id="Robust-Profile-Reconstruction-algorithm"><a href="#Robust-Profile-Reconstruction-algorithm" class="headerlink" title="Robust Profile Reconstruction algorithm"></a>Robust Profile Reconstruction algorithm</h2><h2 id="Library"><a href="#Library" class="headerlink" title="Library"></a>Library</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://doc.cgal.org/latest/Manual/tuto_reconstruction.html">CGAL - Surface constructing from point clouds</a></li>
+</ul>
+<h2 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻"></a>參考文獻</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://doi.org/10.1007/s00170-006-0406-9">Reverse engineering of turbine blades based on design intent</a></p>
+</li>
+<li><p><a href="">A Review of Geometric Reconstruction Algorithm and<br>Repairing Methodologies for Gas Turbine Components</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wolfchambers.github.io/fall17/topologyseminar/SurfaceReconstructions.pdf">reconstructing surface from pont scans</a></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
