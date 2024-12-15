@@ -20,23 +20,23 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="葉片幾何外觀幾個重要的部位稱呼  Leading Edge (LE) Trailing Edge(TE) Suction Side (SE) Pressure Side (PS) chord     利用7個圓弧定義葉片輪廓 - seven arcs method  利用7個相切的圓弧定義出葉片的剖面形狀seven arc method   NACA - National Advisory Com">
+    <meta name="description" content="葉片幾何外觀幾個重要的部位稱呼  Leading Edge (LE) Trailing Edge(TE) Suction Side (SE) Pressure Side (PS) chord      利用7個圓弧定義葉片輪廓 - seven arcs method  利用7個相切的圓弧定義出葉片的剖面形狀   NACA - National Advisory Committtee for Aer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="blade geometry">
 <meta property="og:url" content="http://example.com/2024/12/15/blade-geometry/index.html">
 <meta property="og:site_name" content="Brent&#39;s Hexo">
-<meta property="og:description" content="葉片幾何外觀幾個重要的部位稱呼  Leading Edge (LE) Trailing Edge(TE) Suction Side (SE) Pressure Side (PS) chord     利用7個圓弧定義葉片輪廓 - seven arcs method  利用7個相切的圓弧定義出葉片的剖面形狀seven arc method   NACA - National Advisory Com">
+<meta property="og:description" content="葉片幾何外觀幾個重要的部位稱呼  Leading Edge (LE) Trailing Edge(TE) Suction Side (SE) Pressure Side (PS) chord      利用7個圓弧定義葉片輪廓 - seven arcs method  利用7個相切的圓弧定義出葉片的剖面形狀   NACA - National Advisory Committtee for Aer">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/:/4e6697783e0f4e77ad3ad43a9c5129ba">
-<meta property="og:image" content="http://example.com/:/75fc2d87d7234644afc4c0f245adbd8a">
+<meta property="og:image" content="http://example.com/2024/12/15/blade-geometry/4e6697783e0f4e77ad3ad43a9c5129ba.png">
+<meta property="og:image" content="http://example.com/2024/12/15/blade-geometry/75fc2d87d7234644afc4c0f245adbd8a.png">
 <meta property="og:image" content="https://www1.grc.nasa.gov/wp-content/uploads/wing.gif">
-<meta property="og:image" content="http://example.com/:/f608c2d38a3843308e19e5a1e71229db">
-<meta property="article:published_time" content="2024-12-15T03:11:20.000Z">
-<meta property="article:modified_time" content="2024-12-15T03:13:33.615Z">
+<meta property="og:image" content="http://example.com/2024/12/15/blade-geometry/f608c2d38a3843308e19e5a1e71229db.png">
+<meta property="article:published_time" content="2024-12-15T03:33:43.000Z">
+<meta property="article:modified_time" content="2024-12-15T06:32:45.971Z">
 <meta property="article:author" content="Brent Chang">
-<meta property="article:tag" content="note">
+<meta property="article:tag" content="blade, aerospace">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/:/4e6697783e0f4e77ad3ad43a9c5129ba">
+<meta name="twitter:image" content="http://example.com/2024/12/15/blade-geometry/4e6697783e0f4e77ad3ad43a9c5129ba.png">
 
 
 <link rel="canonical" href="http://example.com/2024/12/15/blade-geometry/">
@@ -119,7 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Camber-line"><span class="nav-number">1.</span> <span class="nav-text">Camber line</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%B1%E8%AE%80"><span class="nav-number">2.</span> <span class="nav-text">閱讀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Segmentation-and-Constrained-Fitting-Algorithm-SCFA"><span class="nav-number">3.</span> <span class="nav-text">Segmentation and Constrained Fitting Algorithm(SCFA)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Constraints-based-nonrigid-registration-method"><span class="nav-number">4.</span> <span class="nav-text">Constraints based nonrigid registration method</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Robust-Profile-Reconstruction-algorithm"><span class="nav-number">5.</span> <span class="nav-text">Robust Profile Reconstruction algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Library"><span class="nav-number">6.</span> <span class="nav-text">Library</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB"><span class="nav-number">7.</span> <span class="nav-text">參考文獻</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%B1%E8%AE%80"><span class="nav-number">1.</span> <span class="nav-text">閱讀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Segmentation-and-Constrained-Fitting-Algorithm-SCFA"><span class="nav-number">2.</span> <span class="nav-text">Segmentation and Constrained Fitting Algorithm(SCFA)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Constraints-based-nonrigid-registration-method"><span class="nav-number">3.</span> <span class="nav-text">Constraints based nonrigid registration method</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Robust-Profile-Reconstruction-algorithm"><span class="nav-number">4.</span> <span class="nav-text">Robust Profile Reconstruction algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Library"><span class="nav-number">5.</span> <span class="nav-text">Library</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB"><span class="nav-number">6.</span> <span class="nav-text">參考文獻</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -142,7 +142,7 @@
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -199,7 +199,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-12-15 11:11:20 / Modified: 11:13:33" itemprop="dateCreated datePublished" datetime="2024-12-15T11:11:20+08:00">2024-12-15</time>
+      <time title="Created: 2024-12-15 11:33:43 / Modified: 14:32:45" itemprop="dateCreated datePublished" datetime="2024-12-15T11:33:43+08:00">2024-12-15</time>
     </span>
 
   
@@ -233,27 +233,31 @@
 <li>Pressure Side (PS)</li>
 <li>chord</li>
 </ul>
-<p><img src="/:/4e6697783e0f4e77ad3ad43a9c5129ba" alt="b2f97757d466609dacf6566143f9e7e4.png"></p>
-<p><img src="/:/75fc2d87d7234644afc4c0f245adbd8a" alt="1cbfb236f05bb239eba42047728dd945.png"></p>
+<img src="/2024/12/15/blade-geometry/4e6697783e0f4e77ad3ad43a9c5129ba.png" class="" width="500" title="seven arc method">
+
+<img src="/2024/12/15/blade-geometry/75fc2d87d7234644afc4c0f245adbd8a.png" class="" width="500" title="region of the blade">
 <ul>
 <li><p>利用7個圓弧定義葉片輪廓 - seven arcs method</p>
 <blockquote>
-<p>利用7個相切的圓弧定義出葉片的剖面形狀<br><a href=":/2bd56207de2349a8b21ce532f388f3a7">seven arc method</a></p>
+<p>利用7個相切的圓弧定義出葉片的剖面形狀</p>
 </blockquote>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/NACA_airfoil">NACA - National Advisory Committtee for Aeronautics airfoils</a><br>利用數學公式定義camber line上葉片輪廓的厚度的一套系統方法<br>標示上NACA 後面會有四碼數字代表剖面幾何的重要參數<br>因此，資訊處理上，就可以根據這樣的編號系統來做分類與搜尋</p>
 </li>
 </ul>
-<p>註: [Camber line]</p>
-<h2 id="Camber-line"><a href="#Camber-line" class="headerlink" title="Camber line"></a>Camber line</h2><p>設計airfoil時的一條假想線。通過Leading edge 和 trailing edge ，把airfoil 分成上下兩半部<br>定義翼型的曲率，翼弦(chord)為中線，而camber 大小定義了在沿著弦移動過程，翼型特徵偏離弦的距離大小或說是厚度。</p>
+<p>註: <strong>Camber line</strong></p>
+<p>設計airfoil時的一條假想線。通過Leading edge 和 trailing edge ，把airfoil 分成上下兩半部<br>定義翼型的曲率，翼弦(chord)為中線，而camber 大小定義了在沿著弦移動過程，翼型特徵偏離弦的距離大小或說是厚度。</p>
 <p>當翼型是完全對稱的時候,camber 也就是0 。 </p>
-<p><img src="https://www1.grc.nasa.gov/wp-content/uploads/wing.gif"></p>
+<img src="https://www1.grc.nasa.gov/wp-content/uploads/wing.gif" class="" width="500">
+
+
 <h2 id="閱讀"><a href="#閱讀" class="headerlink" title="閱讀"></a>閱讀</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://flying609.wordpress.com/2021/05/16/%E7%A9%BA%E5%8B%95%E8%B6%85%E5%85%A5%E9%96%809-%E5%B8%B8%E8%A6%8B%E7%9A%84%E7%BF%BC%E5%BD%A2%E5%8F%8A%E5%85%B6%E7%89%B9%E9%BB%9E-common-airfoil-shapes/">空動超入門9-常見的翼形及其特點</a></li>
 <li><a target="_blank" rel="noopener" href="https://ntrs.nasa.gov/api/citations/19930090976/downloads/19930090976.pdf">Summary of airfoil data</a></li>
 </ul>
 <hr>
-<p>blade with internal coolant<br><img src="/:/f608c2d38a3843308e19e5a1e71229db" alt="ed55353568fd5dfb1a9cf7850a521784.png"></p>
+<img src="/2024/12/15/blade-geometry/f608c2d38a3843308e19e5a1e71229db.png" class="" width="500" title="blade with internal coolant">
+
 <h2 id="Segmentation-and-Constrained-Fitting-Algorithm-SCFA"><a href="#Segmentation-and-Constrained-Fitting-Algorithm-SCFA" class="headerlink" title="Segmentation and Constrained Fitting Algorithm(SCFA)"></a>Segmentation and Constrained Fitting Algorithm(SCFA)</h2><p>相關文獻</p>
 <ul>
 <li><p><ref><a target="_blank" rel="noopener" href="https://10.0.3.239/s00170-006-0406-9">Mohaghegh K, Sadeghi M H, Abdullah A. Reverse engineering of turbine blades based on design intent. International Journal of Advanced Manufacturing Technology. 2007; 32(9-10): 1009-1020.</a></p>
@@ -283,6 +287,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/blade-aerospace/" rel="tag"># blade, aerospace</a>
+          </div>
 
         
 
