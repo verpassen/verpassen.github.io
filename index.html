@@ -122,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -158,6 +158,160 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/15/kaggle-Course-Notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Brent Chang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/15/kaggle-Course-Notes/" class="post-title-link" itemprop="url">[kaggle Course] Notes</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-12-15 10:34:18 / Modified: 10:44:06" itemprop="dateCreated datePublished" datetime="2024-12-15T10:34:18+08:00">2024-12-15</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/12/15/kaggle-Course-Notes/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/12/15/kaggle-Course-Notes/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
+<li>匯入需要的module ，檔案</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line">file_path =  <span class="string">&#x27;../input/data/melb_data.csv&#x27;</span></span><br><span class="line">home_data = pd.read_csv(file_path)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>選定要分析的 response y 和 features X</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">y= home_data.prices</span><br><span class="line">melb_features = [<span class="string">&#x27;Rooms&#x27;</span>, <span class="string">&#x27;Bathroom&#x27;</span>, <span class="string">&#x27;Landsize&#x27;</span>, <span class="string">&#x27;Lattitude&#x27;</span>, <span class="string">&#x27;Longtitude&#x27;</span>]</span><br><span class="line">X = home_data[melb_features]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有些還會需要將原有資料做split。<br>將資料分成training和verify data (通常為 80% : 20%)</p>
+</li>
+<li><p>建立所需的模型<br>看是要利用哪一種迴歸模型(目前有看到的Random forest, desicion tree regressor)</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[Estimator的主要兩個方法] --&gt; B[fit]</span><br><span class="line">A --&gt; C[Transform]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sklearn.tree <span class="keyword">import</span> DescisionTreeRegressor</span><br><span class="line"></span><br><span class="line">melb_model = DecisionTreeRegressor(random_state= <span class="number">1</span>)</span><br><span class="line">melb_model.fit(X,y)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ul>
+<li><p>利用模型進行預測 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># compare the origin data and prediction data </span></span><br><span class="line"><span class="built_in">print</span>(X.head())</span><br><span class="line"><span class="built_in">print</span>(melb_model.predict(X.head()))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模型驗證(model validation)</p>
+<blockquote>
+<p>模型所預測的結果與實際發生的結果相近程度</p>
+</blockquote>
+</li>
+</ul>
+<p>但要用什麼方法來做驗證?  metrics 矩陣<br><strong>MAE (Mean absolute Error)</strong><br>一般而言誤差指的是</p>
+<blockquote>
+<p>error &#x3D; actual - predicted<br>$$<br> MAE &#x3D; 1&#x2F;n \sum |y_{true} - y_{pred}|<br>$$</p>
+</blockquote>
+<p>而在MAE 矩陣中, 我們將這個誤差轉換成一個正數<br>用來理解模型預測的品質<br>而這個數值可以理解成模型所預測的結果偏離實際的距離</p>
+<ul>
+<li>Validate data<blockquote>
+<p>在模型建立的過程中, 就先把某些部份的資料排除, 作為後續用來驗證模型預測品質的資料組</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"></span><br><span class="line">train_x,val_X,train_y,val_Y = train_test_split(X,y,random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#定義模型</span></span><br><span class="line">mymodel = DecisionTreeRegressor()</span><br><span class="line">mymodel.fit(train_x,train_y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把 validate data 丟給模型, 做預測</span></span><br><span class="line">val_predicted = mymodel.predict(val_X) </span><br><span class="line"><span class="built_in">print</span>(mean_absolute_err(val_Y,val_predicted))</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>underfitting vs. overfitting  <img src='https://storage.googleapis.com/kaggle-media/learn/images/AXSEOfI.png' width="400">
+
+<ul>
+<li><p>   overfitting<br>  對模型現有的資料,可以擬合的狀態非常好, 但對於新的資料,卻並非總是如此</p>
+</li>
+<li><p>   underfitting</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>對於決策樹的深度,不夠深, 造成不論是驗證的資料或是訓練資料都無法產生足夠好品質的預測結果</p>
+<h2 id="熵"><a href="#熵" class="headerlink" title="熵"></a>熵</h2><p><strong>用來量化資訊的不確定性</strong>。</p>
+<blockquote>
+<p>Entropy : a qunatity from nformation theory to measure uncertainty<br>越多不確定性，越需要更多問題來做決策樹</p>
+</blockquote>
+<ul>
+<li>Mutual Information(MI)<br>MI 越小，表示兩個特徵的相關性越低。若為0，表示這兩個數值相互獨立。correlation 只能偵測線性的關係，mutual Information 可以偵測到任何形式的相關性。</li>
+</ul>
+<h2 id="Feature-scaling"><a href="#Feature-scaling" class="headerlink" title="Feature scaling"></a>Feature scaling</h2><ol>
+<li><p>Normalization : 把數值縮到[0，1]這個範圍<br> $<br> x_{norm}^{(i)} &#x3D; \frac{x^{(i)} - x_{min}}{x_{max}-x_{min}}<br> $</p>
+</li>
+<li><p>Standardization : 把數值的平均值移到0，標準差移到1<br>$<br>x_{std}^{(i)} &#x3D; \frac{x^{(i)} - \mu_x}{\sigma_x}<br>$</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/03/yaml-introduce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -176,7 +330,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/03/yaml-introduce/" class="post-title-link" itemprop="url">yaml_introduce</a>
+          <a href="/2024/03/03/yaml-introduce/" class="post-title-link" itemprop="url">Yaml 檔案介紹</a>
         </h2>
 
         <div class="post-meta-container">
@@ -188,7 +342,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-03 22:23:12 / Modified: 22:23:53" itemprop="dateCreated datePublished" datetime="2024-03-03T22:23:12+08:00">2024-03-03</time>
+      <time title="Created: 2024-03-03 22:23:12 / Modified: 22:25:02" itemprop="dateCreated datePublished" datetime="2024-03-03T22:23:12+08:00">2024-03-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
