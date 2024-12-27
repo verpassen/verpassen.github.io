@@ -122,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -149,6 +149,238 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/27/hash-value/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Brent Chang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/27/hash-value/" class="post-title-link" itemprop="url">hash value 雜湊值</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-12-27 20:32:57 / Modified: 20:44:04" itemprop="dateCreated datePublished" datetime="2024-12-27T20:32:57+08:00">2024-12-27</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/12/27/hash-value/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/12/27/hash-value/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><ul>
+<li><p>可以看成資料、檔案的摘要(message digest)。但又不會透漏原始的資訊</p>
+</li>
+<li><p>檢視資料的完整性(integrity)<br>資料前後有無變動、修改</p>
+</li>
+</ul>
+<hr>
+<p><strong>架構為</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stateDiagram-v2</span><br><span class="line">信息M --&gt; H(m)=雜湊值HashValue :Hash Function</span><br></pre></td></tr></table></figure>
+
+<p>給定任意長度的資料可以產出固定長度的文字(通常為256或512 bit)<br>而產出的文字又稱雜湊值(hash value 或 digest)</p>
+<hr>
+<h2 id="hash-function-特點"><a href="#hash-function-特點" class="headerlink" title="hash function 特點"></a>hash function 特點</h2><ul>
+<li><strong>計算快</strong><br>  不需要花太多的計算成本。<br>  hash value 的長度是由演算法所決定，<br>  不論原始資料的大小，都會產生固定長度的hash value</li>
+<li><strong>避免碰撞(Collision resistance)</strong><br>  不可發生存在兩個不同內容卻產生同個hash value 的狀況<ul>
+<li>內容稍有改變，hash value 將有大幅度的變化(<a href=":/7365186c98fe41f5b3ba039a13bbb622">Avalanche effect</a>)</li>
+</ul>
+</li>
+<li><strong>單向性</strong><br>  無法由hash value 反推出原始的資料<br>  hash value 不會揭露任何原始資料的訊息。<br>  攻擊者無法藉由hash value 字面上的意思得到任何關於原始資訊的訊息</li>
+</ul>
+<hr>
+<h2 id="安全性-Security"><a href="#安全性-Security" class="headerlink" title="安全性(Security)"></a>安全性(Security)</h2><p>分成兩點 </p>
+<ul>
+<li><p>Collision Resistance (抗碰撞性) </p>
+<blockquote>
+<p>找到M1,M2 符合 H(M1)&#x3D;H(M2)</p>
+</blockquote>
+</li>
+<li><p>Preimage Resistance (抗原像性)<br>可分成 Preimage resistance 和 second preimage resistance<br>Preimage resistance 指的是 </p>
+<blockquote>
+<p>給定 h&#x3D; H(M1)，很難找到M1</p>
+</blockquote>
+</li>
+</ul>
+<p>Second preimage resistance 指的是</p>
+<blockquote>
+<p>給定 M1 ，很難找到 另外一個M2 ≠ M1 ，可以符合H(M1)&#x3D;H(M2)</p>
+</blockquote>
+<p>恩…這聽起來很像前面所講的抗碰撞性</p>
+<hr>
+<h2 id="常見的演算法"><a href="#常見的演算法" class="headerlink" title="常見的演算法"></a>常見的演算法</h2><ul>
+<li>MD5</li>
+<li>SHA1</li>
+<li>SHA2</li>
+<li>SHA3</li>
+<li>BLAKE2</li>
+</ul>
+<p>目前MD5和SHA1都已被發現有缺陷。非必要就別用了。<br>雖然有些軟體的驗證還是會提供MD5值供辨識</p>
+<hr>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=b4b8ktEV4Bg">Hashing Algorithms and Security - Computerphile</a></p>
+<p><a target="_blank" rel="noopener" href="https://datatracker.ietf.org/doc/html/rfc6234">RFC 6234</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Brent Chang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Brent's Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/" class="post-title-link" itemprop="url">dexel-based simulation of DED additive manufacturing</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-12-27 20:22:52 / Modified: 20:37:51" itemprop="dateCreated datePublished" datetime="2024-12-27T20:22:52+08:00">2024-12-27</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="What-is-Dexel"><a href="#What-is-Dexel" class="headerlink" title="What is Dexel ?"></a>What is Dexel ?</h1><h2 id="What-is-Voxel-體素"><a href="#What-is-Voxel-體素" class="headerlink" title="What is Voxel(體素)?"></a>What is Voxel(體素)?</h2><h3 id="Dexel"><a href="#Dexel" class="headerlink" title="Dexel"></a>Dexel</h3><p>壓縮的體素(voxel)模型。 dexel 模型透過一到三組群的射線與物體的交點來表示一個物體。<br>優點是只需要儲存交點的資訊，可以大大的減少儲存空間，並且布林運算是dexel 射線間的線性運算，速度快精度高。</p>
+<h2 id="What-is-the-difference-between-dexel-based-method-and-conventional-one"><a href="#What-is-the-difference-between-dexel-based-method-and-conventional-one" class="headerlink" title="What is the difference between dexel-based method and conventional one?"></a>What is the difference between dexel-based method and conventional one?</h2><h2 id="Is-there-any-limit-when-applying-this-method"><a href="#Is-there-any-limit-when-applying-this-method" class="headerlink" title="Is there any limit when applying this method ?"></a>Is there any limit when applying this method ?</h2><p>不同的製程參數會導致不同的掃出體積( sweep volume) ，如果是一維的特徵則是指沉積高度與寬度。<br>其中沉積寬高，會因為製程的參數，如果是WAAM 會受電流A 與 移動速度 V影響；如果是LP-DED ，則會受到供粉速率mf (mass of powder feed rate )與移動速度V，雷射功率 P 影響。<br>在幾何外型模擬中，除了 <strong>製程參數</strong> 外，還需要考慮的還有 <strong>刀具路徑</strong> 的影響。(在這篇文獻中並沒有相關的探討)</p>
+<h2 id="What-is-Dexel-based-simulation"><a href="#What-is-Dexel-based-simulation" class="headerlink" title="What is Dexel-based simulation ?"></a>What is Dexel-based simulation ?</h2><p>Dexel-based 比較適合固定每層高的製程，例如: SLM 。相較起來用於DED 製程的模擬文獻比較少。<br>Tri-dexel-based simulation 常用於切削加工模擬。</p>
+<p><img src="/Dexel-based%20simulation%20of%20DED%20additive%20manufacturi%200bd46ece3b534f46b5f554dea1b59934/Untitled.png" alt="Untitled"></p>
+<p>材料的資訊 可以儲存成，(X,Y,Z)<br>每個X,Y 沿著 DEXEL 射線掃略，Z 可以看成是 INDEX NUMBER 。 如果這個區域沒有材料，則設成EVEN；反之，則設成ODD 。<br>因此，對於增材來說就是改變Z的位元(Parity of the number)</p>
+<h2 id="製程參數對於熔覆特徵的資訊如何取得"><a href="#製程參數對於熔覆特徵的資訊如何取得" class="headerlink" title="製程參數對於熔覆特徵的資訊如何取得"></a>製程參數對於熔覆特徵的資訊如何取得</h2><p>進行製程的實驗。設定實驗材質中，單道(single track)不同電流與移動速度，並利用輪廓量測儀器，取得沉積的特徵尺寸，藉由這些實驗資料建立經驗數值，來得到不同製程參數下的沉積特徵尺寸。</p>
+<blockquote>
+<p>Function (A , V) &#x3D; [寬度、高度]  $\rightarrow$ 建立virtual tool的尺寸</p>
+</blockquote>
+<hr>
+<h2 id="閱讀資料"><a href="#閱讀資料" class="headerlink" title="閱讀資料"></a>閱讀資料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.metal-am.com/ad-proc-add-project-studies-additive-subtractive-manufacturing-process-chains/">Add project studies additive-subtractive manufacturing process chains</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.shcas.net/jsjyup/pdf/2020/11/%E5%9F%BA%E4%BA%8E%E4%B8%89%E5%90%91Dexel%E7%9A%84GPU%E5%8A%A0%E9%80%9F%E6%95%B0%E6%8E%A7%E4%BB%BF%E7%9C%9F%E6%96%B9%E6%B3%95.pdf">基于三向Dexel的GPU加速数控仿真方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hant/%E5%85%AB%E5%8F%89%E6%A0%91">八叉樹 - 維基百科，自由的百科全書 (wikipedia.org)</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1155,114 +1387,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/26/Python-UnicodeDecodeError/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Brent Chang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Brent's Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Brent's Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/26/Python-UnicodeDecodeError/" class="post-title-link" itemprop="url">Python UnicodeDecodeError</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-26 00:00:00" itemprop="dateCreated datePublished" datetime="2021-06-26T00:00:00+08:00">2021-06-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2021-11-14 13:59:24" itemprop="dateModified" datetime="2021-11-14T13:59:24+08:00">2021-11-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2021/06/26/Python-UnicodeDecodeError/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/06/26/Python-UnicodeDecodeError/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Code</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys,os </span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(File_Path+<span class="string">&#x27;\\business_card.html&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	soup = BeautifulSoup(fp,<span class="string">&#x27;html.parser&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Error msg</p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;D:\work temp\business card\re_name.py&quot;, line 35, in &lt;module&gt;</span><br><span class="line">    soup = BeautifulSoup(fp,&#x27;html.parser&#x27;)</span><br><span class="line">  File &quot;C:\Users\goodn\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bs4\__init__.py&quot;, line 309, in __init__</span><br><span class="line">    markup = markup.read()</span><br><span class="line">UnicodeDecodeError: &#x27;cp950&#x27; codec can&#x27;t decode byte 0xe5 in position 471: illegal multibyte sequence</span><br></pre></td></tr></table></figure>
-
-<p>Solved<br>在讀取檔案時，添加指定utf-8 編碼</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys,os </span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(File_Path+<span class="string">&#x27;\\business_card.html&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	soup = BeautifulSoup(fp,<span class="string">&#x27;html.parser&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
 
 </div>
   </main>

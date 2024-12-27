@@ -20,30 +20,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="ML流程 匯入需要的module ，檔案  123import pandas as pd file_path &#x3D;  &#x27;..&#x2F;input&#x2F;data&#x2F;melb_data.csv&#x27;home_data &#x3D; pd.read_csv(file_path)   選定要分析的 response y 和 features X 123y&#x3D; home_data.pricesmelb_features">
+    <meta name="description" content="What is Dexel ?What is Voxel(體素)?Dexel壓縮的體素(voxel)模型。 dexel 模型透過一到三組群的射線與物體的交點來表示一個物體。優點是只需要儲存交點的資訊，可以大大的減少儲存空間，並且布林運算是dexel 射線間的線性運算，速度快精度高。 What is the difference between dexel-based method and conv">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[kaggle Course] Notes">
-<meta property="og:url" content="http://example.com/2024/12/15/kaggle-Course-Notes/index.html">
+<meta property="og:title" content="dexel-based simulation of DED additive manufacturing">
+<meta property="og:url" content="http://example.com/2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/index.html">
 <meta property="og:site_name" content="Brent&#39;s Hexo">
-<meta property="og:description" content="ML流程 匯入需要的module ，檔案  123import pandas as pd file_path &#x3D;  &#x27;..&#x2F;input&#x2F;data&#x2F;melb_data.csv&#x27;home_data &#x3D; pd.read_csv(file_path)   選定要分析的 response y 和 features X 123y&#x3D; home_data.pricesmelb_features">
+<meta property="og:description" content="What is Dexel ?What is Voxel(體素)?Dexel壓縮的體素(voxel)模型。 dexel 模型透過一到三組群的射線與物體的交點來表示一個物體。優點是只需要儲存交點的資訊，可以大大的減少儲存空間，並且布林運算是dexel 射線間的線性運算，速度快精度高。 What is the difference between dexel-based method and conv">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://storage.googleapis.com/kaggle-media/learn/images/AXSEOfI.png">
-<meta property="article:published_time" content="2024-12-15T02:34:18.000Z">
-<meta property="article:modified_time" content="2024-12-15T02:44:06.493Z">
+<meta property="og:image" content="http://example.com/Dexel-based%20simulation%20of%20DED%20additive%20manufacturi%200bd46ece3b534f46b5f554dea1b59934/Untitled.png">
+<meta property="article:published_time" content="2024-12-27T12:22:52.000Z">
+<meta property="article:modified_time" content="2024-12-27T12:37:51.002Z">
 <meta property="article:author" content="Brent Chang">
 <meta property="article:tag" content="note">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://storage.googleapis.com/kaggle-media/learn/images/AXSEOfI.png">
+<meta name="twitter:image" content="http://example.com/Dexel-based%20simulation%20of%20DED%20additive%20manufacturi%200bd46ece3b534f46b5f554dea1b59934/Untitled.png">
 
 
-<link rel="canonical" href="http://example.com/2024/12/15/kaggle-Course-Notes/">
+<link rel="canonical" href="http://example.com/2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/12/15/kaggle-Course-Notes/","path":"2024/12/15/kaggle-Course-Notes/","title":"[kaggle Course] Notes"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/","path":"2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/","title":"dexel-based simulation of DED additive manufacturing"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[kaggle Course] Notes | Brent's Hexo</title>
+<title>dexel-based simulation of DED additive manufacturing | Brent's Hexo</title>
   
 
 
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ML"><span class="nav-number">1.</span> <span class="nav-text">ML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%86%B5"><span class="nav-number">1.2.</span> <span class="nav-text">熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feature-scaling"><span class="nav-number">1.3.</span> <span class="nav-text">Feature scaling</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-Dexel"><span class="nav-number">1.</span> <span class="nav-text">What is Dexel ?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-Voxel-%E9%AB%94%E7%B4%A0"><span class="nav-number">1.1.</span> <span class="nav-text">What is Voxel(體素)?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dexel"><span class="nav-number">1.1.1.</span> <span class="nav-text">Dexel</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-the-difference-between-dexel-based-method-and-conventional-one"><span class="nav-number">1.2.</span> <span class="nav-text">What is the difference between dexel-based method and conventional one?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Is-there-any-limit-when-applying-this-method"><span class="nav-number">1.3.</span> <span class="nav-text">Is there any limit when applying this method ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-Dexel-based-simulation"><span class="nav-number">1.4.</span> <span class="nav-text">What is Dexel-based simulation ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A3%BD%E7%A8%8B%E5%8F%83%E6%95%B8%E5%B0%8D%E6%96%BC%E7%86%94%E8%A6%86%E7%89%B9%E5%BE%B5%E7%9A%84%E8%B3%87%E8%A8%8A%E5%A6%82%E4%BD%95%E5%8F%96%E5%BE%97"><span class="nav-number">1.5.</span> <span class="nav-text">製程參數對於熔覆特徵的資訊如何取得</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%B1%E8%AE%80%E8%B3%87%E6%96%99"><span class="nav-number">1.6.</span> <span class="nav-text">閱讀資料</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,7 +166,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/15/kaggle-Course-Notes/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -179,12 +179,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="[kaggle Course] Notes | Brent's Hexo">
+      <meta itemprop="name" content="dexel-based simulation of DED additive manufacturing | Brent's Hexo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [kaggle Course] Notes
+          dexel-based simulation of DED additive manufacturing
         </h1>
 
         <div class="post-meta-container">
@@ -196,7 +196,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-12-15 10:34:18 / Modified: 10:44:06" itemprop="dateCreated datePublished" datetime="2024-12-15T10:34:18+08:00">2024-12-15</time>
+      <time title="Created: 2024-12-27 20:22:52 / Modified: 20:37:51" itemprop="dateCreated datePublished" datetime="2024-12-27T20:22:52+08:00">2024-12-27</time>
     </span>
 
   
@@ -208,8 +208,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2024/12/15/kaggle-Course-Notes/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/12/15/kaggle-Course-Notes/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/12/27/dexel-based-simulation-of-DED-additive-manufacturing/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -222,77 +222,21 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
-<li>匯入需要的module ，檔案</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line">file_path =  <span class="string">&#x27;../input/data/melb_data.csv&#x27;</span></span><br><span class="line">home_data = pd.read_csv(file_path)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>選定要分析的 response y 和 features X</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">y= home_data.prices</span><br><span class="line">melb_features = [<span class="string">&#x27;Rooms&#x27;</span>, <span class="string">&#x27;Bathroom&#x27;</span>, <span class="string">&#x27;Landsize&#x27;</span>, <span class="string">&#x27;Lattitude&#x27;</span>, <span class="string">&#x27;Longtitude&#x27;</span>]</span><br><span class="line">X = home_data[melb_features]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>有些還會需要將原有資料做split。<br>將資料分成training和verify data (通常為 80% : 20%)</p>
-</li>
-<li><p>建立所需的模型<br>看是要利用哪一種迴歸模型(目前有看到的Random forest, desicion tree regressor)</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[Estimator的主要兩個方法] --&gt; B[fit]</span><br><span class="line">A --&gt; C[Transform]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sklearn.tree <span class="keyword">import</span> DescisionTreeRegressor</span><br><span class="line"></span><br><span class="line">melb_model = DecisionTreeRegressor(random_state= <span class="number">1</span>)</span><br><span class="line">melb_model.fit(X,y)</span><br></pre></td></tr></table></figure>
-
-
-
-
-<ul>
-<li><p>利用模型進行預測 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># compare the origin data and prediction data </span></span><br><span class="line"><span class="built_in">print</span>(X.head())</span><br><span class="line"><span class="built_in">print</span>(melb_model.predict(X.head()))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>模型驗證(model validation)</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="What-is-Dexel"><a href="#What-is-Dexel" class="headerlink" title="What is Dexel ?"></a>What is Dexel ?</h1><h2 id="What-is-Voxel-體素"><a href="#What-is-Voxel-體素" class="headerlink" title="What is Voxel(體素)?"></a>What is Voxel(體素)?</h2><h3 id="Dexel"><a href="#Dexel" class="headerlink" title="Dexel"></a>Dexel</h3><p>壓縮的體素(voxel)模型。 dexel 模型透過一到三組群的射線與物體的交點來表示一個物體。<br>優點是只需要儲存交點的資訊，可以大大的減少儲存空間，並且布林運算是dexel 射線間的線性運算，速度快精度高。</p>
+<h2 id="What-is-the-difference-between-dexel-based-method-and-conventional-one"><a href="#What-is-the-difference-between-dexel-based-method-and-conventional-one" class="headerlink" title="What is the difference between dexel-based method and conventional one?"></a>What is the difference between dexel-based method and conventional one?</h2><h2 id="Is-there-any-limit-when-applying-this-method"><a href="#Is-there-any-limit-when-applying-this-method" class="headerlink" title="Is there any limit when applying this method ?"></a>Is there any limit when applying this method ?</h2><p>不同的製程參數會導致不同的掃出體積( sweep volume) ，如果是一維的特徵則是指沉積高度與寬度。<br>其中沉積寬高，會因為製程的參數，如果是WAAM 會受電流A 與 移動速度 V影響；如果是LP-DED ，則會受到供粉速率mf (mass of powder feed rate )與移動速度V，雷射功率 P 影響。<br>在幾何外型模擬中，除了 <strong>製程參數</strong> 外，還需要考慮的還有 <strong>刀具路徑</strong> 的影響。(在這篇文獻中並沒有相關的探討)</p>
+<h2 id="What-is-Dexel-based-simulation"><a href="#What-is-Dexel-based-simulation" class="headerlink" title="What is Dexel-based simulation ?"></a>What is Dexel-based simulation ?</h2><p>Dexel-based 比較適合固定每層高的製程，例如: SLM 。相較起來用於DED 製程的模擬文獻比較少。<br>Tri-dexel-based simulation 常用於切削加工模擬。</p>
+<p><img src="/Dexel-based%20simulation%20of%20DED%20additive%20manufacturi%200bd46ece3b534f46b5f554dea1b59934/Untitled.png" alt="Untitled"></p>
+<p>材料的資訊 可以儲存成，(X,Y,Z)<br>每個X,Y 沿著 DEXEL 射線掃略，Z 可以看成是 INDEX NUMBER 。 如果這個區域沒有材料，則設成EVEN；反之，則設成ODD 。<br>因此，對於增材來說就是改變Z的位元(Parity of the number)</p>
+<h2 id="製程參數對於熔覆特徵的資訊如何取得"><a href="#製程參數對於熔覆特徵的資訊如何取得" class="headerlink" title="製程參數對於熔覆特徵的資訊如何取得"></a>製程參數對於熔覆特徵的資訊如何取得</h2><p>進行製程的實驗。設定實驗材質中，單道(single track)不同電流與移動速度，並利用輪廓量測儀器，取得沉積的特徵尺寸，藉由這些實驗資料建立經驗數值，來得到不同製程參數下的沉積特徵尺寸。</p>
 <blockquote>
-<p>模型所預測的結果與實際發生的結果相近程度</p>
+<p>Function (A , V) &#x3D; [寬度、高度]  $\rightarrow$ 建立virtual tool的尺寸</p>
 </blockquote>
-</li>
+<hr>
+<h2 id="閱讀資料"><a href="#閱讀資料" class="headerlink" title="閱讀資料"></a>閱讀資料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.metal-am.com/ad-proc-add-project-studies-additive-subtractive-manufacturing-process-chains/">Add project studies additive-subtractive manufacturing process chains</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.shcas.net/jsjyup/pdf/2020/11/%E5%9F%BA%E4%BA%8E%E4%B8%89%E5%90%91Dexel%E7%9A%84GPU%E5%8A%A0%E9%80%9F%E6%95%B0%E6%8E%A7%E4%BB%BF%E7%9C%9F%E6%96%B9%E6%B3%95.pdf">基于三向Dexel的GPU加速数控仿真方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hant/%E5%85%AB%E5%8F%89%E6%A0%91">八叉樹 - 維基百科，自由的百科全書 (wikipedia.org)</a></li>
 </ul>
-<p>但要用什麼方法來做驗證?  metrics 矩陣<br><strong>MAE (Mean absolute Error)</strong><br>一般而言誤差指的是</p>
-<blockquote>
-<p>error &#x3D; actual - predicted<br>$$<br> MAE &#x3D; 1&#x2F;n \sum |y_{true} - y_{pred}|<br>$$</p>
-</blockquote>
-<p>而在MAE 矩陣中, 我們將這個誤差轉換成一個正數<br>用來理解模型預測的品質<br>而這個數值可以理解成模型所預測的結果偏離實際的距離</p>
-<ul>
-<li>Validate data<blockquote>
-<p>在模型建立的過程中, 就先把某些部份的資料排除, 作為後續用來驗證模型預測品質的資料組</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"></span><br><span class="line">train_x,val_X,train_y,val_Y = train_test_split(X,y,random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#定義模型</span></span><br><span class="line">mymodel = DecisionTreeRegressor()</span><br><span class="line">mymodel.fit(train_x,train_y)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把 validate data 丟給模型, 做預測</span></span><br><span class="line">val_predicted = mymodel.predict(val_X) </span><br><span class="line"><span class="built_in">print</span>(mean_absolute_err(val_Y,val_predicted))</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>underfitting vs. overfitting  <img src='https://storage.googleapis.com/kaggle-media/learn/images/AXSEOfI.png' width="400">
-
-<ul>
-<li><p>   overfitting<br>  對模型現有的資料,可以擬合的狀態非常好, 但對於新的資料,卻並非總是如此</p>
-</li>
-<li><p>   underfitting</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>對於決策樹的深度,不夠深, 造成不論是驗證的資料或是訓練資料都無法產生足夠好品質的預測結果</p>
-<h2 id="熵"><a href="#熵" class="headerlink" title="熵"></a>熵</h2><p><strong>用來量化資訊的不確定性</strong>。</p>
-<blockquote>
-<p>Entropy : a qunatity from nformation theory to measure uncertainty<br>越多不確定性，越需要更多問題來做決策樹</p>
-</blockquote>
-<ul>
-<li>Mutual Information(MI)<br>MI 越小，表示兩個特徵的相關性越低。若為0，表示這兩個數值相互獨立。correlation 只能偵測線性的關係，mutual Information 可以偵測到任何形式的相關性。</li>
-</ul>
-<h2 id="Feature-scaling"><a href="#Feature-scaling" class="headerlink" title="Feature scaling"></a>Feature scaling</h2><ol>
-<li><p>Normalization : 把數值縮到[0，1]這個範圍<br> $<br> x_{norm}^{(i)} &#x3D; \frac{x^{(i)} - x_{min}}{x_{max}-x_{min}}<br> $</p>
-</li>
-<li><p>Standardization : 把數值的平均值移到0，標準差移到1<br>$<br>x_{std}^{(i)} &#x3D; \frac{x^{(i)} - \mu_x}{\sigma_x}<br>$</p>
-</li>
-</ol>
 
     </div>
 
@@ -306,13 +250,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/03/03/yaml-introduce/" rel="prev" title="Yaml 檔案介紹">
-                  <i class="fa fa-angle-left"></i> Yaml 檔案介紹
+                <a href="/2024/12/15/blade-geometry/" rel="prev" title="blade geometry">
+                  <i class="fa fa-angle-left"></i> blade geometry
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/12/15/blade-geometry/" rel="next" title="blade geometry">
-                  blade geometry <i class="fa fa-angle-right"></i>
+                <a href="/2024/12/27/hash-value/" rel="next" title="hash value 雜湊值">
+                  hash value 雜湊值 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
